@@ -7,6 +7,3 @@ def uppercase(word):
         else:
             new += c
     return new
-
-
-print(uppercase("Best School 98 Battery street"))
