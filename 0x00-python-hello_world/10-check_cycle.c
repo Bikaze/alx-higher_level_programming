@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/*
+ *This code implements the Floyd's Tortoise and Hare algorithm
+ *used to detect cycles in a linked list
+ */
+
 /**
   *check_cycle - checks whether the linked list has a circle
   *@list: first node of the list
@@ -11,11 +16,11 @@ int check_cycle(listint_t *list)
 	listint_t *hare = list;
 	listint_t *tortoise = list;
 
-	while(hare != NULL && hare->next != NULL)
+	while (hare != NULL && hare->next != NULL)
 	{
 		tortoise = tortoise->next;
 		hare = hare->next->next;
-		if(hare == tortoise)
+		if (hare == tortoise)
 			return (1);
 	}
 	return (0);
