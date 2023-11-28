@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 def uppercase(word):
-    new = ""
     for c in word:
         if ord(c) >= 97 and ord(c) <= 123:
-            new += chr(ord(c) - 32)
+            print("{:c}".format(ord(c) - 32), end="")
         else:
-            new += c
-     print(new)
+            print("{:c}".format(ord(c)), end="")
+    print()
+
+
+uppercase("clmnt")
