@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-"""Simplest class in python"""
-
-
 class Square:
+    """Simplest class in python"""
     pass
