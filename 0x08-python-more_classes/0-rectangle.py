@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Defines and empty class Rectangle"""
+
+
 class Rectangle:
-    def __init__(self):
-        pass
+    """ class that defines properties of rectangle
+    """
+    pass
