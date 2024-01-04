@@ -6,10 +6,15 @@ class Rectangle:
     """ class that defines properties of rectangle
 
         Attributes:
-        width (int): width of the rectangle
-        height (int): height of the rectangle
+            width (int): width of the rectangle
+            height (int): height of the rectangle
     """
     def __init__(self, width=0, height=0):
+        """Creates a new instance of Rectangle class
+
+        Args:
+            width(int,):
+        """
         self.__width = width
         self.__height = height
 
