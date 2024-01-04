@@ -3,13 +3,13 @@
 
 
 class Rectangle:
-    number_of_instances = 0
     """ class that defines properties of rectangle
 
         Attributes:
             width (int): width of the rectangle
             height (int): height of the rectangle
     """
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
