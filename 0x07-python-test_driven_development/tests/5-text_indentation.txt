@@ -1,0 +1,23 @@
+This file contains interactive tests of the '5-text_indentation.py' module
+--------------------------------------------------------------------------
+>>> text_indentation("The program is: ALX")
+The program is:
+<BLANKLINE>
+ALX
+
+>>> text_indentation("Am I   ?    Learning.   so fast?")
+Am I?
+<BLANKLINE>
+Learning.
+<BLANKLINE>
+so fast?
+
+>>> text_indentation("")
+<BLANKLINE>
+>>> text_indentation(4)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
