@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This module defines one function; 'matrix_divided()'.
 It takes a matrix with equal rows, and a diving number as input
