@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This module provides one function; 'print_square()'
 >>> print_square(size=4)
@@ -6,6 +7,7 @@ This module provides one function; 'print_square()'
 ####
 ####
 """
+
 
 def print_square(size):
     """Takes one argument 'size', which is the size of the
