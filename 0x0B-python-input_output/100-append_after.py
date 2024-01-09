@@ -9,9 +9,6 @@ def append_after(filename="", search_string="", new_string=""):
     a specific string
     """
 
-    if search_string == "" or new_string == "":
-        return
-
     with open(filename, 'r', encoding='utf-8') as f:
         data = f.readlines()
 
@@ -19,5 +16,5 @@ def append_after(filename="", search_string="", new_string=""):
         if search_string in data[i]:
             data.insert(i+1, new_string)
 
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.writelines(data)
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.writelines(data)
