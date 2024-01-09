@@ -12,9 +12,12 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r', encoding='utf-8') as f:
         data = f.readlines()
 
-    for i in range(len(data)):
-        if search_string in data[i]:
-            data.insert(i+1, new_string)
+    new_text = ""
+    for sentence in data:
+        if search_string in sentence:
+            new_text += sentence + new_string
+        else:
+            new_text += sentence
 
-    with open(filename, 'w', encoding='utf-8') as file:
-        file.writelines(data)
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(new_text)
