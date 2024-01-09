@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 append_after() function
 """
@@ -16,5 +16,5 @@ def append_after(filename="", search_string="", new_string=""):
         if search_string in data[i]:
             data.insert(i+1, new_string)
 
-    with open(filename, 'w', encoding='utf-8') as data_file:
-        data_file.writelines(data)
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.writelines(data)
