@@ -97,3 +97,25 @@ class Rectangle(Base):
         """Simulates the y coordinate"""
         for i in range(self.y):
             print()
+
+    def update(self, *args, **kwargs):
+        """Updates the object attributes"""
+
+        if args:
+            self.__updating(*args)
+        elif kwargs:
+            self.__updating(**kwargs)
+
+    def __updating(self, id=None, width=None, height=None, x=None, y=None):
+        """implements the updating of attributes"""
+
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
