@@ -30,4 +30,3 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(AttributeError):
             print(shape.__width)
-        
