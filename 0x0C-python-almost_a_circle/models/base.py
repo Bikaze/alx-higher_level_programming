@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """This module contains the class 'Base'"""
 
+import json
+
 
 class Base:
     """This is the base class for models"""
@@ -15,3 +17,10 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries=None):
+        if list is not None:
+            return json.dumps(list_dictionaries)
+        else:
+            return '[]'
