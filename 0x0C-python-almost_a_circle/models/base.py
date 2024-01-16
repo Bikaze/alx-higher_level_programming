@@ -21,7 +21,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries=None):
         """Makes a list of dictionaries Json-stringified"""
-        if list is not None:
+        if list is not None and list_dictionaries:
             return json.dumps(list_dictionaries)
         else:
             return "[]"
