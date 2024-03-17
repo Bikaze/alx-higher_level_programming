@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Fetching only the first object from the database
+"""Fetching all objects containing letter 'a' from the database
 """
 import sys
-from model_state import State
+from model_state import State, Base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 
@@ -13,8 +13,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).first()
-    if state:
-        print(f"{state.id}: {state.name}")
-    else:
-        print("Nothing")
+    for state in session.query(State):
+        if 'a' in state.name:
+            print(f"{state.id}: {state.name}")
