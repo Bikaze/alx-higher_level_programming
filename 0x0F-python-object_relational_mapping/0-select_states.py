@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""The following code lists all rows in the 'states' database"""
 import MySQLdb
 from sys import argv
 
