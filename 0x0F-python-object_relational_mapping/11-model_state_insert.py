@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" This is ascript that prints the State object with the name
-    passed as argument (it prints the State.id)
+"""This script adds the State object “Louisiana” to the database
 """
 import sys
 from model_state import State, Base
@@ -16,9 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name ==
-                                        (sys.argv[4], )).one_or_none()
-    if state:
-        print(state.id)
-    else:
-        print("Not found")
+    obj = State(name='Louisiana')
+    session.add(obj)
+    session.commit()
+    print(obj.id)
