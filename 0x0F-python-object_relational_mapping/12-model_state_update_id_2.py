@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    obj = session.query(State).get(2)
+    obj = session.get(State, 2)
     if obj:
         obj.name = "New Mexico"
         session.commit()

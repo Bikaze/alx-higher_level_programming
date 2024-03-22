@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This file contains the definition of the City model"""
-from model_state import Base, State
+from model_state import Base
 from sqlalchemy import Integer, Column, String, ForeignKey
 
 
