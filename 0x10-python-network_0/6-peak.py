@@ -8,7 +8,6 @@ def find_peak(list_int):
 
     while left <= right:
         m = (left + right) // 2
-        
         if m > 0 and list_int[m] < list_int[m-1]:
             right = m - 1
         elif m < len(list_int) - 1 and list_int[m] < list_int[m + 1]:
