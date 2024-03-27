@@ -4,10 +4,14 @@
 
 def find_peak(list_int):
     """This function takes a list of numbers and returns one peak"""
-    if len(set(list_int)) == 1:
+    if len(list_int) == 0:
+        return None
+    if len(list_int) == 1:
         return list_int[0]
-    for i in range(len(list_int)):
-        if not list_int[i-1] or list_int[i] > list_int[i-1]:
-            if not list_int[i+1] or list_int[i] > list_int[i+1]:
-                return list_int[i]
-                break
+
+    i = len(list_int) // 2
+    if not list_int[i-1] or list_int[i] > list_int[i-1]:
+        if not list_int[i+1] or list_int[i] > list_int[i+1]:
+            return list_int[i]
+        return find_peak(list_int[i+1:])
+    return find_peak(list_int[:i])
