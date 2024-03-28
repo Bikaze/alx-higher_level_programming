@@ -4,7 +4,8 @@
 from urllib.request import Request, urlopen
 from sys import argv
 
-req = Request(argv[1])
+if __name__ == "__main__":
+    req = Request(argv[1])
 
-with urlopen(req) as response:
-    print(response.getheader("X-Request-Id"))
+    with urlopen(req) as response:
+        print(response.getheader("X-Request-Id"))
