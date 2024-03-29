@@ -6,7 +6,7 @@ if __name__ == "__main__":
     from urllib.error import HTTPError
     from sys import argv
     try:
-        req = Request(argv[1]).encode('utf-8')
+        req = Request(argv[1])
         with urlopen(req) as response:
             data = response.read().decode("utf-8")
     except HTTPError as e:
