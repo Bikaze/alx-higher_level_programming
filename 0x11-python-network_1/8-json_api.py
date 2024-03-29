@@ -7,7 +7,7 @@ if __name__ == "__main__":
     from sys import argv
 
     arg = ""
-    if argv[1]:
+    if len(argv) > 1:
         arg = argv[1]
     parameters = {'q': arg}
 
