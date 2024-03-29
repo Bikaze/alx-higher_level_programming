@@ -7,5 +7,7 @@ if __name__ == "__main__":
 
     response = get(f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits")
     data = response.json()
-    for i in range(10):
+    i = 0
+    while i < 10 and i < len(data):
         print(f"{data[i]['sha']}: {data[i]['commit']['author']['name']}")
+        i += 1
