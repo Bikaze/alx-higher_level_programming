@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# This script takes a url and email as arguments and passes the email as
-# a parameter
+""" This script takes a url and email as arguments and passes the email as
+a parameter and displays the body of the response (decoded in utf-8)"""
 if __name__ == "__main__":
     import urllib.request
     import urllib.parse
@@ -10,4 +10,4 @@ if __name__ == "__main__":
     args = args.encode('utf-8')
     req = urllib.request.Request(argv[1], args)
     with urllib.request.urlopen(req) as response:
-        print(reponse.read().decode("utf-8"))
+        print(response.read().decode("utf-8"))
