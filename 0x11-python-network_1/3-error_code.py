@@ -2,11 +2,12 @@
 """ This script takes a url and email as arguments and passes the email as
 a parameter and displays the body of the response (decoded in utf-8)"""
 if __name__ == "__main__":
-    from urllib.request import urlopen
+    from urllib.request import Request, urlopen
     from urllib.error import HTTPError
     from sys import argv
     try:
-        with urlopen(argv[1]) as response:
+        req = Request(argv[1]).encode('utf-8')
+        with urlopen(req) as response:
             data = response.read().decode("utf-8")
     except HTTPError as e:
         print("Error code: ", e.code)
