@@ -8,5 +8,5 @@ if __name__ == "__main__":
 
     parameters = {'email': argv[2]}
 
-    response = post(argv[1], params=parameters)
+    response = post(argv[1], data=parameters)
     print(response.text)
