@@ -3,10 +3,10 @@
 a parameter and displays the body of the response (decoded in utf-8)"""
 
 if __name__ == "__main__":
-    from requests import get
+    from requests import post
     from sys import argv
 
     parameters = {'email': argv[2]}
 
-    response = get(argv[1], params=parameters)
+    response = post(argv[1], params=parameters)
     print(response.text)
