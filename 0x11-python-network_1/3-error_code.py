@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" This script takes a url and email as arguments and passes the email as
-a parameter and displays the body of the response (decoded in utf-8)"""
+""" This script takes a url and displays the body of the response
+(decoded in utf-8)"""
 if __name__ == "__main__":
     from urllib.request import Request, urlopen
     from urllib.error import HTTPError
