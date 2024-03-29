@@ -12,10 +12,11 @@ if __name__ == "__main__":
     parameters = {'q': arg}
 
     response = post("http://0.0.0.0:5000/search_user", data=parameters)
-    if response.json() == {}:
-        print("No result")
-    elif not response.json():
+    try:
+        if response.json() == {}:
+            print("No result")
+        else:
+            r = response.json()
+            print(f"[{r.get('id')}] {r.get('name')}")
+    except ValueError:
         print("Not a valid JSON")
-    else:
-        r = response.json()
-        print(f"[{r.get('id')}] {r.get('name')}")
