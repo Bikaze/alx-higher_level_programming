@@ -1,4 +1,4 @@
-//This script updates the text color of the <header> element to red
+//This script adds the red class to the <header> element
 
 $("div#red_header").click(function() {
 	$("header").addClass("red");
